@@ -1,0 +1,389 @@
+/* GENERAL PAGE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: white;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* LOGO AND BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: auto;
+}
+
+.brand img {
+    width: 140px;
+    height: auto;
+    margin: 0;
+}
+
+.brand-text {
+    flex: none;
+    text-align: left;
+}
+
+.brand-text h1 {
+    color: #006341;
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.brand-text p {
+    color: #e63946;
+    font-size: 21px;
+    margin: 7px 0 0;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #e63946;
+    padding: 18px 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #f4c542;
+}
+/* MAIN BANNER */
+.hero {
+    background-color: #006341;
+    color: white;
+    text-align: center;
+    padding: 10px 20px 45px;
+}
+
+.hero h2 {
+    color: #f4c542;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hero h3 {
+    color: white;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* PAGE SECTIONS */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #006341;
+}
+
+/* FOOTER */
+footer {
+    background-color: #006341;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}/* ABOUT US SECTION */
+.about {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about h2 {
+    color: #006341;
+    font-size: 28px;
+}
+
+.about h3 {
+    color: #e63946;
+    font-size: 20px;
+}
+
+.about p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+/* LISTEN LIVE SECTION */
+.listen {
+    padding-top: 10px;
+}
+
+.listen h2 {
+    margin-top: 0;
+}
+/* ABOUT, PROGRAMMES, NEWS AND CONTACT SPACING */
+
+.about {
+    padding: 10px 20px 40px;
+}
+
+#programmes,
+#news,
+#contact {
+    padding: 10px 20px 40px;
+}
+
+.about h2,
+#programmes h2,
+#news h2,
+#contact h2 {
+    margin-top: 0;
+}
+/* REDUCE SPACE BELOW SECTIONS */
+.about {
+    padding-bottom: 15px;
+}
+
+#programmes,
+#news,
+#contact {
+    padding-bottom: 15px;
+}
+
+/* RESPONSIVE DESIGN - ALL DEVICES */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+img,
+audio,
+video {
+    max-width: 100%;
+}
+
+/* TABLETS AND MOBILE PHONES */
+@media screen and (max-width: 768px) {
+
+    header {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .brand img {
+        width: clamp(60px, 18vw, 100px);
+    }
+
+    .brand-text h1 {
+        font-size: clamp(19px, 5.5vw, 32px);
+        letter-spacing: 0;
+    }
+
+    .brand-text p {
+        font-size: clamp(12px, 3vw, 17px);
+        margin-top: 5px;
+    }
+
+    nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 12px 8px;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: clamp(13px, 3.5vw, 17px);
+        margin: 5px 0;
+    }
+
+    .hero {
+        width: 100%;
+        padding: 20px 15px 35px;
+    }
+
+    .hero h2 {
+        font-size: clamp(23px, 6vw, 32px);
+        line-height: 1.2;
+    }
+
+    .hero h3 {
+        font-size: clamp(17px, 4.5vw, 22px);
+    }
+
+    .hero p {
+        font-size: clamp(15px, 4vw, 18px);
+        line-height: 1.5;
+    }
+
+    .hero-button {
+        padding: 13px 25px;
+    }
+
+    section {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .listen audio {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+    }
+}
+
+/* SMALL PHONES */
+@media screen and (max-width: 400px) {
+
+    .brand img {
+        width: 55px;
+    }
+
+    .brand-text h1 {
+        font-size: 19px;
+    }
+
+    .brand-text p {
+        font-size: 11px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
+
+/* CORPORATE SECTION BACKGROUNDS */
+
+/* LISTEN LIVE */
+.listen {
+    background-color: #F3F6F4;
+}
+
+/* PROGRAMMES */
+#programmes {
+    background-color: #F3F6F4;
+}
+
+/* PARTNERS */
+#partners {
+    background-color: #E8F2EC;
+}
+
+/* CORPORATE COLOURS - REMAINING SECTIONS */
+
+/* ABOUT US */
+#about {
+    background-color: #FFFFFF;
+}
+
+/* LATEST NEWS */
+#news {
+    background-color: #F3F6F4;
+}
+
+/* CONTACT */
+#contact {
+    background-color: #006341;
+    color: #FFFFFF;
+}
+
+#contact h2 {
+    color: #F4C542;
+}
+
+#contact p {
+    color: #FFFFFF;
+}
+
+/* FOOTER */
+footer {
+    background-color: #004D32;
+    color: #FFFFFF;
+}
+
+/* PARTNERS SECTION */
+#partners {
+    background-color: #E8F2EC;
+    padding: 40px 20px;
+}
+
+#partners h2 {
+    color: #006341;
+}
+
+.partner-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-left: 5px solid #006341;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.partner-card h3 {
+    color: #006341;
+}
+
+.partner-card a {
+    color: #006341;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.partner-card a:hover {
+    color: #E63946;
+}
