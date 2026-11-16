@@ -387,3 +387,37 @@ footer {
 .partner-card a:hover {
     color: #E63946;
 }
+
+/* CMS NEWS ARTICLES */
+
+.cms-news-list {
+    max-width: 1000px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #FFFFFF;
+    padding: 22px;
+    border-left: 5px solid #006341;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.news-card h3 {
+    color: #006341;
+    margin-top: 0;
+}
+
+.news-date {
+    color: #E63946;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-card p {
+    line-height: 1.6;
+}
