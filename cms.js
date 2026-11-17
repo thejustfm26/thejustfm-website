@@ -4,7 +4,7 @@
 const CMS_CONFIG = {
     owner: "thejustfm26",
     repository: "thejustfm-website",
-    branch: "full-cms-integration"
+    branch: "main"
 };
 
 // Build the GitHub API address
