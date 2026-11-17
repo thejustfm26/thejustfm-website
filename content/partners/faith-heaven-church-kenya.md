@@ -1,6 +1,5 @@
 ---
 name: FAITH HEAVEN CHURCH KENYA
 website: faithheavenchurchkenya.org
-phone: ....
-description: parent
+phone: "0700105721"
 ---
