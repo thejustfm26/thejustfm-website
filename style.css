@@ -421,3 +421,49 @@ footer {
 .news-card p {
     line-height: 1.6;
 }
+
+/* CMS RICH-TEXT CONTENT */
+
+.programme-description,
+.news-body {
+    line-height: 1.7;
+    text-align: left;
+}
+
+.programme-description h1,
+.programme-description h2,
+.programme-description h3,
+.news-body h1,
+.news-body h2,
+.news-body h3 {
+    color: #006341;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.programme-description p,
+.news-body p {
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+.programme-description ul,
+.programme-description ol,
+.news-body ul,
+.news-body ol {
+    padding-left: 25px;
+    line-height: 1.7;
+}
+
+.programme-description img,
+.news-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.programme-description a,
+.news-body a {
+    color: #006341;
+    font-weight: bold;
+}
