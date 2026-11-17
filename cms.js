@@ -99,6 +99,27 @@ function createTextElement(tag, value, className) {
     return element;
 }
 
+// Create a safe rich-text element
+function createRichTextElement(value, className) {
+    const element = document.createElement("div");
+
+    if (className) {
+        element.className = className;
+    }
+
+    if (typeof marked !== "undefined" &&
+        typeof DOMPurify !== "undefined") {
+        element.innerHTML = DOMPurify.sanitize(
+            marked.parse(value || "")
+        );
+    } else {
+        element.textContent = value || "";
+    }
+
+    return element;
+}
+
+
 // Display programmes
 async function displayProgrammes() {
     const section = document.getElementById("programmes");
@@ -138,10 +159,10 @@ async function displayProgrammes() {
             }
 
             if (programme.description) {
-                card.appendChild(
-                    createTextElement("p", programme.description)
-                );
-            }
+    card.appendChild(
+        createRichTextElement(programme.description, "programme-description")
+    );
+}
 
             container.appendChild(card);
         });
@@ -210,10 +231,10 @@ async function displayNews() {
             }
 
             if (article.body) {
-                card.appendChild(
-                    createTextElement("p", article.body)
-                );
-            }
+    card.appendChild(
+        createRichTextElement(article.body, "news-body")
+    );
+}
 
             container.appendChild(card);
         });
