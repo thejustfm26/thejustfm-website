@@ -152,6 +152,7 @@ async function displayProgrammes() {
     }
 }
 
+
 // Display news
 async function displayNews() {
     const section = document.getElementById("news");
@@ -179,6 +180,24 @@ async function displayNews() {
 
             const card = document.createElement("article");
             card.className = "news-card";
+
+            // Display news image when available
+            if (article.image) {
+                const image = document.createElement("img");
+
+                image.src = /^https?:\/\//i.test(article.image)
+                    ? article.image
+                    : new URL(
+                        article.image.replace(/^\/+/, ""),
+                        document.baseURI
+                    ).href;
+
+                image.alt = article.title;
+                image.loading = "lazy";
+                image.className = "news-image";
+
+                card.appendChild(image);
+            }
 
             card.appendChild(
                 createTextElement("h3", article.title)
